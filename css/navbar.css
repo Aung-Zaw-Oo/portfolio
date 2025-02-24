@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --color-1: #09101a;
+  --color-2: #141c27;
+  --color-3: #55e6a5;
+  --color-4: #e5e5e5;
+  --color-5: #ffffff;
+
+  font-size: 16px;
+
+  --font-1: "Lora", serif;
+  --font-2: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-1);
+  font-family: var(--font-2);
+}
+
+nav {
+  background-color: var(--color-2);
+  margin: 0 10vw;
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+}
+
+nav ul li {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--color-5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+nav ul li a:hover {
+  background-color: var(--color-3);
+  color: var(--color-2);
+  border-radius: 5px;
+}
+
+nav ul li:first-child,
+nav ul li:first-child a {
+  margin-right: auto;
+  background-color: var(--color-3);
+  color: var(--color-2);
+  font-family: var(--font-1);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  background-color: var(--color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  display: none;
+}
+
+.sidebar li,
+.sidebar a {
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+  nav {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hideOnDesktop {
+    display: none;
+  }
+}
