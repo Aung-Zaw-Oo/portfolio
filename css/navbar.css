@@ -9,13 +9,13 @@
 }
 
 :root {
-  --color-1: #09101a;
-  --color-2: #141c27;
-  --color-3: #55e6a5;
-  --color-4: #e5e5e5;
-  --color-5: #ffffff;
-
   font-size: 16px;
+
+  --deep-navy: #09101a;
+  --light-navy: #141c27;
+  --light-green: #55e6a5;
+  --white-smoke: #e5e5e5;
+  --white: #ffffff;
 
   --font-1: "Lora", serif;
   --font-2: "Poppins", sans-serif;
@@ -23,13 +23,17 @@
 
 body {
   min-height: 100vh;
-  background-color: var(--color-1);
+  background-color: var(--deep-navy);
   font-family: var(--font-2);
 }
 
 nav {
-  background-color: var(--color-2);
-  margin: 0 10vw;
+  background-color: var(--light-navy);
+  padding: 0 10vw;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
 }
 
 nav ul {
@@ -44,26 +48,28 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--color-5);
-  height: 100%;
+  color: var(--white);
+  text-transform: uppercase;
+  height: inherit;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 20px;
+  border-radius: 5px;
 }
 
 nav ul li a:hover {
-  background-color: var(--color-3);
-  color: var(--color-2);
-  border-radius: 5px;
+  background-color: var(--light-green);
+  color: var(--light-navy);
 }
 
 nav ul li:first-child,
 nav ul li:first-child a {
   margin-right: auto;
-  background-color: var(--color-3);
-  color: var(--color-2);
+  background-color: var(--light-green);
+  color: var(--light-navy);
   font-family: var(--font-1);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 2rem;
 }
 
@@ -71,37 +77,20 @@ nav ul li:first-child a {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100%;
   width: 250px;
-  background-color: var(--color-2);
   display: flex;
   flex-direction: column;
-  justify-content: start;
   display: none;
+  background-color: var(--deep-navy);
+}
+
+.sidebar li,
+.sidebar li a {
+  display: flex;
+  justify-content: start;
 }
 
 .sidebar li,
 .sidebar a {
   width: 100%;
-}
-
-@media screen and (max-width: 375px) {
-  .sidebar {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hideOnMobile {
-    display: none;
-  }
-  nav {
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hideOnDesktop {
-    display: none;
-  }
 }

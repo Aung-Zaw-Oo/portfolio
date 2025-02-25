@@ -1,0 +1,32 @@
+/* laptop */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hideOnTablet {
+    display: none;
+  }
+}
+
+/* tablet */
+@media (min-width: 425px) and (max-width: 767px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  nav {
+    padding: 0;
+  }
+}
+
+/* mobile */
+@media (max-width: 424px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}

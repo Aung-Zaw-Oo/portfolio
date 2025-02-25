@@ -1,0 +1,100 @@
+.heroSection {
+  height: 100vh;
+  display: flex;
+  padding: 0 10vw;
+  gap: 40px;
+}
+
+.heroSection .hero {
+  border: 1px solid yellow;
+  height: 100%;
+  width: 50%;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.heroLeft .heroTitle {
+  color: var(--white);
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.heroLeft .heroTitle span {
+  color: var(--light-green);
+}
+
+.heroLeft .heroSubtitle {
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
+.heroLeft .heroButtons {
+  display: flex;
+  gap: 40px;
+}
+
+.heroLeft .heroButtons a {
+  width: 160px;
+  height: 50px;
+  background-color: var(--light-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  color: var(--light-navy);
+  font-weight: 700;
+}
+
+.heroLeft .socialMediaIcons {
+  display: flex;
+  gap: 20px;
+}
+
+.heroLeft .socialMediaIcons svg {
+  width: 42px;
+  height: 42px;
+  color: var(--light-green);
+}
+
+.heroRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outside {
+  position: relative;
+  width: 50vmin;
+  height: 50vmin;
+  background: var(--light-green);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.center {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: var(--deep-navy);
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.inside {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  background: white;
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  background-image: url(/assets/images/hero-image.jpg);
+  background-position: center;
+  background-size: cover;
+}
